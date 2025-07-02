@@ -62,6 +62,17 @@ body {
   margin-bottom: 80px;
 }
 
+.imagem-cabeçalho.imagem-cab5 {
+  background: url('img/moinhos.jpg')no-repeat center center;
+  background-size: cover;
+  padding: 30px; 
+  text-align: center;
+  color: white;
+  position: relative;
+  border-radius: 30px;
+  margin-bottom: 80px;
+}
+
 .imagem-cabeçalho::before {
   content: "";
   position: absolute;
@@ -125,11 +136,11 @@ section {
   border-radius: 30px;
 }
 
-#sobre, #metodologia, #resultados, #contato{
+#sobre, #metodologia, #resultados, #colaboradores{
   background: #fff;
 }
 
-#objetivo, #comunidade, #galeria-imagens {
+#objetivo, #comunidade, #galeria-imagens, #contato {
   background: #f9f9f9e5;
 }
 
