@@ -383,16 +383,14 @@ footer {
   transition: 0.3s;
 }
 
-.about-team {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+#galeria-imagens img:hover {
+  transform: scale(1.05);
 }
 
-.about-team h2 {
+#colaboradores h2 {
   color: #2d572c;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   text-align: center;
 }
 
@@ -449,10 +447,6 @@ footer {
   text-align: center;
 }
 
-#galeria-imagens img:hover {
-  transform: scale(1.05);
-}
-
 /* Ajustes para telas menores */
 @media (max-width: 1024px) {
 
@@ -503,13 +497,25 @@ footer {
     font-size: 1.6em;
   }
   
+  .team-member {
+    margin-bottom: 2.5rem; 
+  }
+
+  .team-member h3 {
+    font-size: 1.3rem; 
+  }
+
+  .team-member p {
+    font-size: 1.1rem; 
+  }
+
   .acessibilidade {
     flex-direction: column; 
     gap: 10px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
   body {
     padding: 20px; 
@@ -559,6 +565,18 @@ footer {
     font-size: 1.6em;
   }
   
+  .team-member {
+    margin-bottom: 2.5rem; 
+  }
+
+  .team-member h3 {
+    font-size: 1.3rem; 
+  }
+
+  .team-member p {
+    font-size: 1.1rem; 
+  }
+
   .acessibilidade {
     flex-direction: column; 
     gap: 10px;
