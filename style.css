@@ -17,84 +17,6 @@ body {
   padding: 80px;
 }
 
-/* Cabeçalho com imagem */
-.imagem-cabeçalho {
-  background: url('img/park-ao-lado-da-cidade-ao-amanhecer.jpg') no-repeat center center;
-  background-size: cover;
-  padding: 30px;
-  text-align: center;
-  color: white;
-  position: relative;
-  border-radius: 30px;
-  margin-bottom: 80px;
-}
-
-.imagem-cabeçalho.imagem-cab2 {
-  background: url('img/comunidade.jpg') no-repeat center center;
-  background-size: cover;
-  padding: 30px; 
-  text-align: center;
-  color: white;
-  position: relative;
-  border-radius: 30px;
-  margin-bottom: 80px;
-}
-
-.imagem-cabeçalho.imagem-cab3 {
-  background: url('img/horta-comunitaria.jpg') no-repeat center center;
-  background-size: cover;
-  padding: 30px; 
-  text-align: center;
-  color: white;
-  position: relative;
-  border-radius: 30px;
-  margin-bottom: 80px;
-}
-
-.imagem-cabeçalho.imagem-cab4 {
-  background: url('img/moinhos.jpg')no-repeat center center;
-  background-size: cover;
-  padding: 30px; 
-  text-align: center;
-  color: white;
-  position: relative;
-  border-radius: 30px;
-  margin-bottom: 80px;
-}
-
-.imagem-cabeçalho.imagem-cab5 {
-  background: url('img/moinhos.jpg')no-repeat center center;
-  background-size: cover;
-  padding: 30px; 
-  text-align: center;
-  color: white;
-  position: relative;
-  border-radius: 30px;
-  margin-bottom: 80px;
-}
-
-.imagem-cabeçalho::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* escurece o fundo */
-  z-index: 1;
-  pointer-events: none;
-  border-radius: 30px;
-}
-
-.imagem-cabeçalho h1 {
-  position: relative;
-  z-index: 2;
-}
-
-.imagem-cabeçalho .acessibilidade {
-  position: relative;
-  z-index: 2;
-}
-
 /* Cabeçalho com degradê verde */
 .cabeçalho {
   background: linear-gradient(90deg, #4caf50, #2e7d32);
@@ -171,12 +93,12 @@ section img {
 .imagem-texto img {
   width: 30%;         
   border-radius: 30px;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.2); 
 }
 
 .imagem-texto img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(1deg);
 }
 
 .imagem-texto p {
@@ -313,7 +235,7 @@ footer {
 }
 
 .alto-contraste footer {
-  background: #000 !important;
+  background: #111 !important;
   color: #fff !important;
 }
 
@@ -336,12 +258,16 @@ footer {
   color: #000 !important;
 }
 
+.alto-contraste .botao-pagina:hover {
+  background-color: rgba(255, 255, 0, 0.514) !important;
+}
+
 .alto-contraste .imagem-cabeçalho h1 {
   color: #ff0 !important;
 }
 
-.alto-contraste .botao-pagina:hover {
-  background-color: rgba(255, 255, 0, 0.514) !important;
+.alto-contraste .team-member p {
+  color: #fff !important;
 }
 
 .alto-contraste :focus {
@@ -380,11 +306,44 @@ footer {
   border-radius: 30px;
   object-fit: cover;
   box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  transition: 0.5s;
+}
+
+#galeria-imagens .imagem-hover img {
+  width: 250px;
+  height: 350px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s;
 }
 
 #galeria-imagens img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(1deg);
+}
+
+.imagem-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.descricao-hover {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imagem-hover:hover .descricao-hover {
+  opacity: 1;
 }
 
 #colaboradores h2 {
@@ -392,6 +351,7 @@ footer {
   margin-bottom: 1.5rem;
   font-size: 1.9rem;
   text-align: center;
+  padding-left: 0;
 }
 
 .team-members {
@@ -423,7 +383,7 @@ footer {
 
 .team-member:hover img {
   transform: scale(1.1) rotate(5deg);
-  border-color: var(--color-accent);
+  border-color: #4caf50
 }
 
 .about-team .team-members .team-member:first-child img {
@@ -470,6 +430,11 @@ footer {
   .imagem-texto img {
     width: 60%;
   }
+
+  .imagem-texto .imagem-hover {
+    width: 60%; /* IGUAL ao img */
+  }
+
 
   .email p {
     word-break: break-word;     
@@ -538,6 +503,11 @@ footer {
     width: 100%;
   }
 
+  .imagem-texto .imagem-hover {
+  width: 100%;
+}
+
+
   .email p {
     word-break: break-word;     
     overflow-wrap: break-word;
@@ -582,3 +552,45 @@ footer {
     gap: 10px;
   }
 }
+
+/* Bloco especial para imagem com texto dentro de imagem-texto */
+.imagem-hover-texto {
+  width: 30%;
+  position: relative;
+  display: block;
+  border-radius: 30px;
+  transition: 0.5s ease;
+}
+
+.imagem-hover-texto img {
+  width: 100%;
+  display: block;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.imagem-hover-texto .descricao-hover {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imagem-hover-texto:hover .descricao-hover {
+  opacity: 1;
+}
+
+.imagem-hover-texto p.descricao-hover {
+  margin: 0;
+  line-height: 1.2;
+  pointer-events: none;
+}
+
